@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>투두리스트</title>
+</head>
+<body>
+    <div class="container">
+        <h1>투두리스트</h1>
+        <div class="tabs">
+            <button onclick="showTab('todo')">해야할일</button>
+            <button onclick="showTab('add')">추가하기</button>
+            <button onclick="showTab('completed')">완료한 일</button>
+        </div>
+
+        <div id="todo" class="tab-content">
+            <ul id="todo-list"></ul>
+        </div>
+
+        <div id="add" class="tab-content" style="display:none;">
+            <input type="text" id="task" placeholder="할일" required>
+            <input type="date" id="due-date" required>
+            <input type="text" id="memo" placeholder="추가메모 (선택)">
+            <button onclick="addTask()">추가</button>
+        </div>
+
+        <div id="completed" class="tab-content" style="display:none;">
+            <ul id="completed-list"></ul>
+        </div>
+
+    </div>
+</body>
+</html>
